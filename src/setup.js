@@ -8,6 +8,8 @@ const logPaths = {
   debug: `${__dirname}/logs/debug.txt`,
 };
 
+fs.mkdirSync(`${__dirname}/logs`, { recursive: true });
+
 //#region create Streams
 // TODO: logg server
 let infoStream = fs.createWriteStream(logPaths.info);
