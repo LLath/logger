@@ -69,8 +69,4 @@ module.exports = {
    * @param {("info"|"error"|"debug")} level
    */
   log: (msg, level) => writeStream(msg, level),
-
-  getLogs: (name) => {
-    return logPaths[name];
-  },
 };
