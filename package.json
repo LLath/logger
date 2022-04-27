@@ -12,5 +12,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LLath/logger.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@llath"
   }
 }
