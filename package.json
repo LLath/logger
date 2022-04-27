@@ -5,7 +5,7 @@
   "main": "setup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access public"
+    "publish:local": "npm publish --access public"
   },
   "author": "",
   "license": "ISC",
