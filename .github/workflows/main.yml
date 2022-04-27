@@ -1,8 +1,13 @@
 name: Logger
 
+# on:
+#   release:
+#     type: [published]
+
 on:
-  release:
-    type: [published]
+  push:
+    branches:
+      - "main"
 
 jobs:
   build:
