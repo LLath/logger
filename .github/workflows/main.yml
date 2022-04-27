@@ -2,7 +2,7 @@ name: Logger
 
 on:
   release:
-    type: [published]
+    types: [published]
 
 jobs:
   build:
