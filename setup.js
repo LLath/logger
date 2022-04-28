@@ -23,11 +23,11 @@ const shortMessage = (msg) => {
     const lines = msg.split("\n");
     return `${lines[0]}`;
   }
+  return msg.slice(0, 100);
 };
 
 const writeStream = (msg, level) => {
   const _path = logPaths[level];
-  const stream = fs.createWriteStream(_path);
 
   const message = (prefix) => {
     if (isLong(msg)) {
@@ -56,11 +56,8 @@ const writeStream = (msg, level) => {
       break;
   }
 
-  stream.on("open", () => {
-    const message = new Date().toISOString() + " : " + msg + "\n";
-    stream.write(message);
-  });
-  stream.on("error", (e) => console.error(e));
+  const _message = new Date().toISOString() + " : " + msg + "\n";
+  fs.appendFileSync(_path, _message);
 };
 
 module.exports = {
